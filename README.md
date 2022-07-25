@@ -20,7 +20,7 @@ The python project is available [here](./python/myapp).
 
 Here [NYC](https://github.com/istanbuljs/nyc) will report nothing at first. Instantiating the `MyService` class will then report a 0% code coverage for functions, as expected.
 
-At the statement level, `NYC` reports a 25% coverage. Statements can be different between languages but it's interesting here that even the definition of the functions (e.g. `doA(): string {`) is included a missing, whereas `Coverage.py` will report those as hits.
+At the statement level, `NYC` reports a 25% coverage. Statements can be different between languages but it's interesting here that even the definition of the functions (e.g. `doA(): string {`) is included as a miss, whereas `Coverage.py` will report those as a hit.
 
 The TypeScript project is available [here](./ts/myapp).
 
