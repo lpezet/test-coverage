@@ -33,4 +33,4 @@ And this is the details of my_service test coverage results:
 The strangeness here is that `def` lines are taken into account and yet it's not possible (to my knowledge) to exclude those without excluding their body.
 It simply doesn't make sense to me here that Python Coverage would report a 57% coverage while no method was actually called.
 
-It's also interesting (in a bad way) that Python Coverage would include `import`/`from` by default. It's like saying Java JaCoCo would include `import`s in tests (it doesn't).
+It's also interesting (in a bad way) that Python Coverage would include `import`/`from` by default. It's like saying Java JaCoCo would include `import`s and `package`s in tests (it doesn't).
