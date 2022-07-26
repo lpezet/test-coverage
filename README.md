@@ -42,16 +42,16 @@ class MyServiceTest(unittest.TestCase):
 ```
 
 
-# Projects
+# Projects (actual)
 
-## Python
+## Python (57%)
 
 Here [Coverage.py](https://coverage.readthedocs.io/en/6.4.2/) will report a surprising **57% code coverage**, even though **not a single method has been called** on the `MyService` class.
 It looks more like `Coverage.py` reports *statement coverage** and doesn't (can't?) report at the function level.
 
 The python project is available [here](./python/myapp).
 
-## TypeScript
+## TypeScript (Unknown/0%)
 
 Here [NYC](https://github.com/istanbuljs/nyc) will report nothing at first. Instantiating the `MyService` class will then report a 0% code coverage for functions, as expected.
 
@@ -59,9 +59,9 @@ At the statement level, `NYC` reports a 25% coverage. Statements can be differen
 
 The TypeScript project is available [here](./ts/myapp).
 
-## Java
+## Java (0%)
 
-[JaCoCo](https://github.com/jacoco/jacoco) here is used and it will report 0% code coverage as expected.
+[JaCoCo](https://github.com/jacoco/jacoco) here is used and it will report 0% code coverage **as expected**.
 
 Even at the statement level Java will report a 0% coverage, as expected.
 
