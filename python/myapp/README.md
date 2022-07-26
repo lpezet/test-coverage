@@ -13,7 +13,6 @@ Run tests:
 
 ```bash
 . .env
-python3 -m unittest discover -s test/ -p '*_test.py'
 ./run.sh unittest
 ./run.sh report
 ```
