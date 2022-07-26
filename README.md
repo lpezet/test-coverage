@@ -7,11 +7,46 @@ In the base case, the test will actuall **NOT** test anything, meaning it doesn'
 
 The results obviously depend on the frameworks/libraries/packages used in each project/language, but popular ones are used.
 
+# Principle
+
+Regardless of the programming language, the idea is to have basically 2 classes/files: the code and its test.
+
+The test itself will actually test nothing. `The expectation is that we get 0% code coverage.`
+
+
+The code is very simple and looks like the following (in python):
+
+```python
+class MyService:
+
+    def doA(self):
+        return "Hello"
+
+    def doB(self):
+        return "World"
+    
+    def doC(self):
+        return "!"
+```
+
+Its test is just as simple, and it's actually very wrong as it doesn't test (assert) anything:
+
+```python
+import unittest
+from com.example.my_service import MyService
+
+class MyServiceTest(unittest.TestCase):
+
+    def test_do_it(self):
+        print("Not doing it.")
+```
+
+
 # Projects
 
 ## Python
 
-Here [Coverage.py](https://coverage.readthedocs.io/en/6.4.2/) will report a surprising **57% code coverage**, even though not a single method has been called on the `MyService` class.
+Here [Coverage.py](https://coverage.readthedocs.io/en/6.4.2/) will report a surprising **57% code coverage**, even though **not a single method has been called** on the `MyService` class.
 It looks more like `Coverage.py` reports *statement coverage** and doesn't (can't?) report at the function level.
 
 The python project is available [here](./python/myapp).
@@ -26,7 +61,7 @@ The TypeScript project is available [here](./ts/myapp).
 
 ## Java
 
-[JaCoCo]() here is used and it will report 0% code coverage as expected.
+[JaCoCo](https://github.com/jacoco/jacoco) here is used and it will report 0% code coverage as expected.
 
 Even at the statement level Java will report a 0% coverage, as expected.
 
