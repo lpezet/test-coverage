@@ -7,9 +7,9 @@ In the base case, the test will actuall **NOT** test anything, meaning it doesn'
 
 The results obviously depend on the frameworks/libraries/packages used in each project/language, but popular ones are used.
 
-# Principle
+# Principle & Expectations
 
-Regardless of the programming language, the idea is to have basically 2 classes/files: the code and its test.
+Regardless of the programming language, the idea is to have basically two classes/files: the code and its test.
 
 The test itself will actually test nothing. `The expectation is that we get 0% code coverage.`
 
